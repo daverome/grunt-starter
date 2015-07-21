@@ -276,7 +276,7 @@
     position: static;
     clear: both;
 
-    &[aria-expanded="false"] {
+    .js &[aria-expanded="false"] {
       display: none;
     }
 

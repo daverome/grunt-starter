@@ -1493,7 +1493,7 @@ input[type=range]:focus::-ms-fill-upper {
   .sub-menu {
     position: static;
     clear: both; }
-    .sub-menu[aria-expanded="false"] {
+    .js .sub-menu[aria-expanded="false"] {
       display: none; }
   .sub-menu-control {
     display: block; } }

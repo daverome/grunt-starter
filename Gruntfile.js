@@ -20,6 +20,7 @@ module.exports = function(grunt) {
           '<%= pkg.destDir %>assets/css/styles.css': '<%= pkg.srcDir %>sass/styles.scss'
         }
       },
+
       min: {
         options: {
           outputStyle: 'compressed'
@@ -66,6 +67,7 @@ module.exports = function(grunt) {
       },
       files: ['<%= pkg.srcDir %>js/**/*.js']
     },
+
     concat: {
       dev: {
         src: ['<%= pkg.srcDir %>js/vendor/**/*.js', '<%= jshint.files %>'],
@@ -78,6 +80,20 @@ module.exports = function(grunt) {
       dist: {
         src: ['<%= jshint.files %>'],
         dest: '<%= pkg.destDir %>assets/js/app.min.js'
+      }
+    },
+
+    //************************************************************
+    // Images
+    //************************************************************
+    imagemin: {
+      dynamic: {
+        files: [{
+          expand: true,                             // Enable dynamic expansion
+          cwd: '<%= pkg.srcDir %>images/',          // Src matches are relative to this path
+          src: ['**/*.{png,jpg,gif}'],              // Actual patterns to match
+          dest: '<%= pkg.destDir %>assets/img/'  // Destination path prefix
+        }]
       }
     },
 
@@ -99,7 +115,7 @@ module.exports = function(grunt) {
       js: {
         files: ['<%= jshint.files %>'],
         tasks: ['js']
-      }
+      },
     },
 
     connect: {
@@ -123,5 +139,5 @@ module.exports = function(grunt) {
 
   grunt.registerTask('js', ['jshint', 'concat', 'uglify']);
 
-
+  grunt.registerTask('images', ['imagemin']);
 };

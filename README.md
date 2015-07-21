@@ -18,3 +18,4 @@ Once you've cloned the repo, run the following commands from the terminal:
 * grunt styles
 * grunt html
 * grunt js
+* grunt images

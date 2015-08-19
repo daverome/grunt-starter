@@ -100,6 +100,21 @@ module.exports = function(grunt) {
     //************************************************************
     // MISC
     //************************************************************
+    webfont: {
+      icons: {
+        src: '<%= pkg.srcDir %>svg/**/*.svg',
+        dest: '<%= pkg.destDir %>assets/fonts/icons',
+        destCss: '<%= pkg.srcDir %>sass/generated',
+        options: {
+          font: 'icons',
+          htmlDemo: false,
+          relativeFontPath: '../fonts/icons',
+          stylesheet: 'scss',
+          syntax: 'bootstrap'
+        }
+      }
+    },
+
     watch: {
       options: {
         livereload: true
@@ -119,6 +134,10 @@ module.exports = function(grunt) {
       img: {
         files: '<%= pkg.srcDir %>images/**/*.{png,jpg,gif}',
         tasks: ['images']
+      },
+      icons: {
+        files: '<%= pkg.srcDir %>svg/**/*.svg',
+        tasks: ['webfont']
       }
     },
 

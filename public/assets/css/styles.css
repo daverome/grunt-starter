@@ -1170,6 +1170,31 @@ input[type=range]:focus::-ms-fill-upper {
   top: -999em;
   left: -999em; }
 
+@font-face {
+  font-family: "icons";
+  src: url("../fonts/icons/icons.eot?a9a9e617d27f70afc805da760a4f0849");
+  src: url("../fonts/icons/icons.eot?#iefix") format("embedded-opentype"), url("../fonts/icons/icons.woff?a9a9e617d27f70afc805da760a4f0849") format("woff"), url("../fonts/icons/icons.ttf?a9a9e617d27f70afc805da760a4f0849") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "icons";
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1;
+  font-weight: normal;
+  font-style: normal;
+  speak: none;
+  text-decoration: inherit;
+  text-transform: none;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.icon-plug:before {
+  content: "\f101"; }
+
 /********************************************************************
 *
 *   Layout

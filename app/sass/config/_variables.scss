@@ -36,3 +36,29 @@ $bp-small: 31.250em; // 500px
 
 
 $page-width: 1200px;
+
+//  ----------------------------------------
+//  Colors
+//  ----------------------------------------
+$lighter-gray:  #fdfdfd;
+$light-gray:    #d6d6d6;
+$dark-gray:     #595959;
+
+$light-blue:    #3c6fb4;
+$blue:          #3663a1;
+$dark-blue:     #1b3251;
+
+
+$c-body:                 $dark-gray;  // body color
+$c-body-background:      $lighter-gray; // html/body background color
+
+$c-links:                $dark-gray;  // a color
+$c-links-link:           $light-blue; // a:link color
+$c-links-visited:        $blue;  // a:visited color
+$c-links-hover:          $dark-blue;  // a:hover color
+$c-links-focus:          $dark-blue;  // a:focus color
+$c-links-focus-outline:  $light-blue;  // a:focus color
+
+
+// Vars
+$has-background: true !default;

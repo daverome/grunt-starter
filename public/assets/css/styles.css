@@ -489,10 +489,13 @@ html {
 
 html,
 body {
-  background: #fdfdfd;
   margin: 0;
   min-height: 100%;
   padding: 0; }
+
+html,
+body {
+  background: #fdfdfd; }
 
 body {
   color: #595959;

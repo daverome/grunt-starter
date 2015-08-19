@@ -116,6 +116,10 @@ module.exports = function(grunt) {
         files: ['<%= jshint.files %>'],
         tasks: ['js']
       },
+      img: {
+        files: '<%= pkg.srcDir %>images/**/*.{png,jpg,gif}',
+        tasks: ['images']
+      }
     },
 
     connect: {
